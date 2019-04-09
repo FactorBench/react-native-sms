@@ -79,7 +79,7 @@ SendSMS.send(myOptionsObject, callback);
 | `body` | String | iOS/Android | No | The text that shows by default when the SMS is initiated |
 | `recipients` | Array (strings) | iOS/Android | No | Provides the phone number recipients to show by default |
 | `successTypes` | Array (strings) | Android | Yes | An array of types that would trigger a "completed" response when using android <br/><br/> Possible values: <br/><br/> `'all' 'inbox' 'sent' 'draft' 'outbox' 'failed' 'queued'` |
-| `allowAndroidSendWithoutReadPermission` | boolean | Android | No | By default, SMS will only be initiated on Android if the user accepts the `READ_SMS` permission (which is required to provide completion statuses to the callback). <br/><br/> Passing `true` here will allow the user to send a message even if they decline the `READ_SMS` permission, and will then provide generic callback values (all false) to your application. |
+| `isAuthorizedForCallback` | Boolean | Android | No | Pass `true` **only** in case `PermissionsAndroid.PERMISSIONS.READ_SMS` is `GRANTED` |
 
 ## Example:
 
